@@ -5,11 +5,10 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
-  // 暫時移除路徑配置進行測試
-  // assetPrefix: process.env.DEPLOYMENT_TYPE === 'custom' ? '/home' : 
-  //              process.env.NODE_ENV === 'production' ? '/home' : '',
-  // basePath: process.env.DEPLOYMENT_TYPE === 'custom' ? '/home' : 
-  //           process.env.NODE_ENV === 'production' ? '/home' : '',
+  // 對於 https://hudence.site/home/ 部署
+  basePath: '/home',
+  // 不使用 assetPrefix，讓靜態資源路徑正確
+  assetPrefix: '',
 }
 
 module.exports = nextConfig 
