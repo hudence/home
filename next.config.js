@@ -5,9 +5,9 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
-  // 對於 https://hudence.site/home/ 部署
-  basePath: '/home',
-  // 不使用 assetPrefix，讓靜態資源路徑正確
+  // 只在生產環境使用 basePath
+  basePath: process.env.NODE_ENV === 'production' ? '/home' : '',
+  // 不使用 assetPrefix
   assetPrefix: '',
 }
 
