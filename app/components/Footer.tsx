@@ -3,7 +3,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Heart, Mail, Phone, MessageCircle, ExternalLink, ArrowUp } from 'lucide-react'
-import Image from 'next/image'
+
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -90,11 +90,10 @@ const Footer = () => {
             >
               <div className="flex items-center space-x-3 mb-6">
                 <div className="relative w-12 h-12">
-                  <Image
+                  <img
                     src="/hudence_single_logo.png"
                     alt="Hudence 艾登星"
-                    fill
-                    className="object-contain"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <div>

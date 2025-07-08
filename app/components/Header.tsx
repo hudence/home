@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronDown, Menu, X } from 'lucide-react'
-import Image from 'next/image'
+
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 
@@ -114,11 +114,10 @@ export default function Header() {
             whileHover={{ scale: 1.02 }}
           >
             <div className="relative w-12 h-12">
-              <Image
+              <img
                 src="/hudence_single_logo.png"
                 alt="艾登星科技教育"
-                fill
-                className="object-contain"
+                className="w-full h-full object-contain"
               />
             </div>
             <div className="flex flex-col">
