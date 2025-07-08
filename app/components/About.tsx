@@ -181,7 +181,7 @@ const About = () => {
             <p className="text-lg text-gray-600">
               我們的核心團隊擁有豐富的教育與科技背景
             </p>
-          </motion.div>
+        </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
@@ -331,7 +331,7 @@ const About = () => {
               </motion.div>
             ))}
           </div>
-        </motion.div>
+          </motion.div>
 
         {/* 委辦課程營隊與輔導團隊詳細說明 */}
         <div className="mt-20">
@@ -533,8 +533,8 @@ const About = () => {
                     <div>
                       <div className="text-2xl font-bold text-purple-400 mb-1">1000+</div>
                       <div className="text-sm text-gray-300">受益學童</div>
-                    </div>
-                    <div>
+                </div>
+                <div>
                       <div className="text-2xl font-bold text-orange-400 mb-1">5年+</div>
                       <div className="text-sm text-gray-300">服務經驗</div>
                     </div>
@@ -698,7 +698,7 @@ const About = () => {
                     </div>
                   </div>
 
-                  <div>
+                <div>
                     <h6 className="font-semibold text-gray-900 mb-2 text-sm">課程內容</h6>
                     <p className="text-gray-600 text-xs">
                       創意飲調及製作咖啡，培養默契增進感情，為每個人製作專屬手沖咖啡
@@ -726,11 +726,11 @@ const About = () => {
                   <div className="text-center">
                     <div className="text-2xl font-bold text-orange-600 mb-1">3</div>
                     <div className="text-sm text-gray-600">專利申請</div>
-                  </div>
                 </div>
               </div>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
+        </div>
 
           {/* 師資培訓營 */}
           <div className="mb-16">
@@ -949,7 +949,7 @@ const About = () => {
                       <div className="text-sm text-gray-300">專業培訓</div>
                     </div>
                   </div>
-                </div>
+              </div>
               </div>
             </motion.div>
           </div>
