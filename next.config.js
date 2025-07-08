@@ -5,8 +5,11 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/home' : '',
-  basePath: process.env.NODE_ENV === 'production' ? '/home' : '',
+  // 暫時移除路徑配置進行測試
+  // assetPrefix: process.env.DEPLOYMENT_TYPE === 'custom' ? '/home' : 
+  //              process.env.NODE_ENV === 'production' ? '/home' : '',
+  // basePath: process.env.DEPLOYMENT_TYPE === 'custom' ? '/home' : 
+  //           process.env.NODE_ENV === 'production' ? '/home' : '',
 }
 
 module.exports = nextConfig 
