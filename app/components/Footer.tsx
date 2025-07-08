@@ -91,7 +91,7 @@ const Footer = () => {
               <div className="flex items-center space-x-3 mb-6">
                 <div className="relative w-12 h-12">
                   <img
-                    src="/hudence_single_logo.png"
+                    src="https://hudence.site/home/hudence_single_logo.png"
                     alt="Hudence 艾登星"
                     className="w-full h-full object-contain"
                   />

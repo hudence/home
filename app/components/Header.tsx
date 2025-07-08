@@ -115,7 +115,7 @@ export default function Header() {
           >
             <div className="relative w-12 h-12">
               <img
-                src="/hudence_single_logo.png"
+                src="https://hudence.site/home/hudence_single_logo.png"
                 alt="艾登星科技教育"
                 className="w-full h-full object-contain"
               />
