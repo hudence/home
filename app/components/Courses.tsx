@@ -117,17 +117,17 @@ const Courses = () => {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16 px-2"
         >
           <motion.h2
             variants={itemVariants}
-            className="text-4xl md:text-5xl font-bold text-gray-800 mb-6"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4 sm:mb-6"
           >
             精選 <span className="text-primary-600">課程介紹</span>
           </motion.h2>
           <motion.p
             variants={itemVariants}
-            className="text-xl text-gray-600 max-w-3xl mx-auto"
+            className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
           >
             依據不同年齡層設計的課程，讓每個孩子都能找到適合的學習起點，
             循序漸進地建立科技素養。
@@ -139,22 +139,22 @@ const Courses = () => {
           variants={itemVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="flex flex-col md:flex-row justify-center mb-12"
+          className="flex flex-col md:flex-row justify-center mb-8 sm:mb-12 px-2"
         >
-          <div className="flex bg-gray-100 rounded-xl p-2">
+          <div className="flex flex-col sm:flex-row bg-gray-100 rounded-xl p-2 w-full sm:w-auto">
             {courseTabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-6 py-3 rounded-lg transition-all duration-200 ${
+                className={`px-4 sm:px-6 py-3 rounded-lg transition-all duration-200 mb-2 sm:mb-0 min-h-[60px] sm:min-h-auto ${
                   activeTab === tab.id
                     ? 'bg-white shadow-md text-primary-600'
                     : 'text-gray-600 hover:text-gray-800'
                 }`}
               >
                 <div className="text-center">
-                  <div className="font-semibold">{tab.label}</div>
-                  <div className="text-sm opacity-75">{tab.description}</div>
+                  <div className="font-semibold text-sm sm:text-base">{tab.label}</div>
+                  <div className="text-xs sm:text-sm opacity-75">{tab.description}</div>
                 </div>
               </button>
             ))}
@@ -167,7 +167,7 @@ const Courses = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8"
         >
           {courses[activeTab as keyof typeof courses].map((course, index) => (
             <motion.div

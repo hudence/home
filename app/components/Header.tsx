@@ -121,16 +121,17 @@ export default function Header() {
               />
             </div>
             <div className="flex flex-col">
-              <h1 className={`text-xl font-bold transition-colors duration-300 ${
+              <h1 className={`text-sm sm:text-base lg:text-xl font-bold transition-colors duration-300 ${
                 isScrolled 
                   ? 'text-gray-900' 
                   : isHomePage 
                     ? 'text-white' 
                     : 'text-white drop-shadow-lg'
               }`}>
-                艾登星科技教育有限公司
+                <span className="hidden sm:inline">艾登星科技教育有限公司</span>
+                <span className="sm:hidden">艾登星教育</span>
               </h1>
-              <p className={`text-sm transition-colors duration-300 ${
+              <p className={`text-xs sm:text-sm transition-colors duration-300 ${
                 isScrolled 
                   ? 'text-blue-700' 
                   : isHomePage 

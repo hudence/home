@@ -108,7 +108,7 @@ const Hero = () => {
 
             <motion.h1
               variants={itemVariants}
-              className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight"
+              className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6 sm:mb-8 leading-tight"
             >
               Hudence
               <br />
@@ -117,7 +117,7 @@ const Hero = () => {
 
             <motion.p
               variants={itemVariants}
-              className="text-xl md:text-2xl mb-8 leading-relaxed text-white/90"
+              className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 leading-relaxed text-white/90 px-2 sm:px-0"
             >
               艾登星科技教育有限公司致力於推動科技教育創新，
               培養學生的創新思維和恆心毅力，為偏鄉地區帶來更多科技教育資源。
@@ -125,25 +125,25 @@ const Hero = () => {
 
             <motion.div
               variants={itemVariants}
-              className="flex flex-col sm:flex-row gap-4 mb-12"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12 px-2 sm:px-0"
             >
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection('#courses')}
-                className="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold flex items-center justify-center space-x-2 hover:bg-gray-100 transition-colors duration-200"
+                className="bg-white text-primary-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold flex items-center justify-center space-x-2 hover:bg-gray-100 transition-colors duration-200 text-sm sm:text-base min-h-[48px]"
               >
                 <span>探索課程</span>
-                <ArrowRight size={20} />
+                <ArrowRight size={18} className="sm:w-5 sm:h-5" />
               </motion.button>
 
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection('#about')}
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold flex items-center justify-center space-x-2 hover:bg-white hover:text-primary-600 transition-all duration-200"
+                className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold flex items-center justify-center space-x-2 hover:bg-white hover:text-primary-600 transition-all duration-200 text-sm sm:text-base min-h-[48px]"
               >
-                <Play size={20} />
+                <Play size={18} className="sm:w-5 sm:h-5" />
                 <span>了解更多</span>
               </motion.button>
             </motion.div>
@@ -151,7 +151,7 @@ const Hero = () => {
             {/* Stats */}
             <motion.div
               variants={itemVariants}
-              className="grid grid-cols-2 md:grid-cols-4 gap-6"
+              className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 px-2 sm:px-0"
             >
               {stats.map((stat, index) => (
                 <motion.div
@@ -159,15 +159,17 @@ const Hero = () => {
                   whileHover={{ scale: 1.05 }}
                   className="text-center"
                 >
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-white/20 rounded-lg mb-3 backdrop-blur-sm">
-                    <div className="text-white">
-                      {stat.icon}
+                  <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-white/20 rounded-lg mb-2 sm:mb-3 backdrop-blur-sm">
+                    <div className="text-white text-sm sm:text-base">
+                      {React.cloneElement(stat.icon, { 
+                        className: "w-4 h-4 sm:w-6 sm:h-6" 
+                      })}
                     </div>
                   </div>
-                  <div className="text-2xl font-bold text-white mb-1">
+                  <div className="text-lg sm:text-2xl font-bold text-white mb-1">
                     {stat.number}
                   </div>
-                  <div className="text-white/80 text-sm">
+                  <div className="text-white/80 text-xs sm:text-sm">
                     {stat.label}
                   </div>
                 </motion.div>
